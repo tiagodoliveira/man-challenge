@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/tiagodoliveira/man-challenge/static/css/main.bf6a68e0.chunk.css",
-    "main.js": "/tiagodoliveira/man-challenge/static/js/main.5dd5cf0c.chunk.js",
-    "main.js.map": "/tiagodoliveira/man-challenge/static/js/main.5dd5cf0c.chunk.js.map",
-    "runtime-main.js": "/tiagodoliveira/man-challenge/static/js/runtime-main.6dd874a1.js",
-    "runtime-main.js.map": "/tiagodoliveira/man-challenge/static/js/runtime-main.6dd874a1.js.map",
-    "static/js/2.a9e79757.chunk.js": "/tiagodoliveira/man-challenge/static/js/2.a9e79757.chunk.js",
-    "static/js/2.a9e79757.chunk.js.map": "/tiagodoliveira/man-challenge/static/js/2.a9e79757.chunk.js.map",
-    "index.html": "/tiagodoliveira/man-challenge/index.html",
-    "precache-manifest.98b1564fc44d806f934224027c1c436b.js": "/tiagodoliveira/man-challenge/precache-manifest.98b1564fc44d806f934224027c1c436b.js",
-    "service-worker.js": "/tiagodoliveira/man-challenge/service-worker.js",
-    "static/css/main.bf6a68e0.chunk.css.map": "/tiagodoliveira/man-challenge/static/css/main.bf6a68e0.chunk.css.map",
-    "static/js/2.a9e79757.chunk.js.LICENSE": "/tiagodoliveira/man-challenge/static/js/2.a9e79757.chunk.js.LICENSE"
+    "main.css": "/man-challenge/static/css/main.bf6a68e0.chunk.css",
+    "main.js": "/man-challenge/static/js/main.344b9ffa.chunk.js",
+    "main.js.map": "/man-challenge/static/js/main.344b9ffa.chunk.js.map",
+    "runtime-main.js": "/man-challenge/static/js/runtime-main.139843a6.js",
+    "runtime-main.js.map": "/man-challenge/static/js/runtime-main.139843a6.js.map",
+    "static/js/2.a9e79757.chunk.js": "/man-challenge/static/js/2.a9e79757.chunk.js",
+    "static/js/2.a9e79757.chunk.js.map": "/man-challenge/static/js/2.a9e79757.chunk.js.map",
+    "index.html": "/man-challenge/index.html",
+    "precache-manifest.24022546bf16fd55a34ff4a99d3dc5a0.js": "/man-challenge/precache-manifest.24022546bf16fd55a34ff4a99d3dc5a0.js",
+    "service-worker.js": "/man-challenge/service-worker.js",
+    "static/css/main.bf6a68e0.chunk.css.map": "/man-challenge/static/css/main.bf6a68e0.chunk.css.map",
+    "static/js/2.a9e79757.chunk.js.LICENSE": "/man-challenge/static/js/2.a9e79757.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.6dd874a1.js",
+    "static/js/runtime-main.139843a6.js",
     "static/js/2.a9e79757.chunk.js",
     "static/css/main.bf6a68e0.chunk.css",
-    "static/js/main.5dd5cf0c.chunk.js"
+    "static/js/main.344b9ffa.chunk.js"
   ]
 }
