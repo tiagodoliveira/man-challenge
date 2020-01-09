@@ -123,9 +123,16 @@ export class MainForm extends React.Component {
                     this.map.panBy(0, -125); 
 
                     //Setting an animation to give a visual reference of which vehicle is selected
-                    if (currentLocationMarker.getAnimation() !== null) { currentLocationMarker.setAnimation(null); }
-                    else { currentLocationMarker.setAnimation(google.maps.Animation.BOUNCE); }
-                    lastLocationMarker.setAnimation(null);
+                    if (currentLocationMarker.getAnimation() !== null && 
+                    currentLocationMarker.position !== lastLocationMarker.position) {
+                         currentLocationMarker.setAnimation(null); 
+                    }
+                    else {
+                         currentLocationMarker.setAnimation(google.maps.Animation.BOUNCE); 
+                        }
+
+                    if(currentLocationMarker.position !== lastLocationMarker.position)
+                        lastLocationMarker.setAnimation(null);
 
                     selectedVehicleLocation = currentLocationMarker.position;
                     lastLocationMarker = currentLocationMarker;
