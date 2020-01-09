@@ -1,68 +1,72 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Instructions
+This challenge is fully available online (both backend and frontend) and can be accessed using the following urls:
 
-## Available Scripts
+- Frontend App:
+```bash
+https://man-challenge-app.herokuapp.com/
+```
+- Backend API:
+```bash
+https://man-challenge-app.herokuapp.com/
+```
 
-In the project directory, you can run:
+The Frontend App should be use to see and test the features whereas the Backend Api is used to retrieve the vehicle's locations and license information.
+The database used in this project was the H2 database engine because it's an in-memory database with a really small footprint. Also it doesn't require complicated setups making the task of deploying the API a lot easier. For more information on H2: https://www.h2database.com/html/main.html
 
-### `npm start`
+**Important:** Only 4 vehicle's licenses were added to the database: **[AA-00-AA, AA-00-BB, AA-00-CC, AA-00-DD]** (case-sensitive). But it is possible to display them all at once. 
+The gps coordinates were generated using the http://map.project-osrm.org application that by setting two or more location pins on a map, generates a xml file with all the coordinates from that path. A class was created to go through that xml file and generate the database Inserts automatically (See src\main\java\com\tiagooliveira\manchallange\tools\DatabaseValuesGenerator.java).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The challenge was implemented as suggested with a couple added features that I added to create a better user experience:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- The distance from a given vehicle marker to the POI is displayed on the POI's marker's card when the latter is clicked.
+- Displaying all vehicles is possible by just submitting the form with the license input field empty. It will retrieve all the vehicles in the database and display them. An animation was created to show to the user which vehicle is selected. To select a different vehicle, click on that vehicle's marker and the mark should start bouncing, this means that the vehicle is now selected and that distances will be calculated from that vehicle's current location.
+- By clicking on a vehicle's marker, the license plate information is displayed on a card. This opens up the possibility of showing more information about the vehicle and its driver to the fleet manager.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+There's no need to install anything as the project is available online, however, if you want to deploy the project locally, use the following commands.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Download the project,
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Git:
+- Frontend App: https://github.com/tiagodoliveira/man-challenge
+- Backend API: [https://github.com/tiagodoliveira/man-challenge-api](https://github.com/tiagodoliveira/man-challenge-api)
 
-### `npm run eject`
+Direct Download (MEGA): 
+- https://mega.nz/#F!dd9E0SwB!QWwtEWLcl6ne7wkAIkqC1Q
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Run the API by loading it to an IDE and running the main class or go to the provided jar folder in your CLI:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cd target
+# And then run:
+java -jar gs-rest-service-cors-0.1.0.jar
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To install the Web application, go to the frontend application folder in your CLI:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+cd app\man-challenge
+# And then run:
+npm start
+```
+**Warning!**  
+Change the configs.json file in app\man-challenge\src if:
 
-## Learn More
+```bash
+#To run everything locally:
+{"apiURL":"http://localhost:8080/vehicles/",
+"API_KEY":"AIzaSyBob70viGuD9PCxbg5xAwqYzuGuEQZR4qo",
+"proxyURL":""}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#To run just the Web application locally (and running the API deployed on the web):
+{"apiURL":"https://man-challenge-backend.herokuapp.com/vehicles/",
+"API_KEY":"AIzaSyBob70viGuD9PCxbg5xAwqYzuGuEQZR4qo",
+"proxyURL":"https://cors-anywhere.herokuapp.com/"}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Use the provided form to interact with the app as explained above.
