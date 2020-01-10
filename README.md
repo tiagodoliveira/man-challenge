@@ -10,6 +10,18 @@ https://man-challenge-app.herokuapp.com/
 https://man-challenge-app.herokuapp.com/
 ```
 
+The API can be used in the following way:
+```bash
+#Home:
+https://man-challenge-app.herokuapp.com/
+
+#Get All Vehicles:
+https://man-challenge-app.herokuapp.com/vehicles/
+
+#Get Vehicles by License:
+https://man-challenge-app.herokuapp.com/vehicles/{license}
+```
+
 The Frontend App should be use to see and test the features whereas the Backend Api is used to retrieve the vehicle's locations and license information.
 The database used in this project was the H2 database engine because it's an in-memory database with a really small footprint. Also it doesn't require complicated setups making the task of deploying the API a lot easier. For more information on H2: https://www.h2database.com/html/main.html
 
